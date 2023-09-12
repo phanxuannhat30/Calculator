@@ -4,7 +4,7 @@ html, body {
     box-sizing: border-box;
 }
 
-#calculator {
+.calculator {
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -12,10 +12,11 @@ html, body {
     margin: 50px auto;
     border: 3px solid pink;
     border-radius: 15px;
+    box-shadow: 1px 1px 5px;
     background-color: #f9dbef;
 }
 
-#display {
+.display {
     display: block;
     width: 390px;
     height: 200px;
@@ -25,6 +26,15 @@ html, body {
     box-shadow: 1px 1px 5px;
     margin: 5px auto;
 }
+
+#calculating-display {
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: right;
+    border: 1px solid red;
+    margin: 20px;
+}
+
 .buttons {
     margin: 10px auto;
     display: grid;
@@ -33,7 +43,7 @@ html, body {
     gap: 20px;
 }
 
-.operator-buttons {
+button {
     width: 75px;
     height: 75px;
     border-radius: 60%;
@@ -44,43 +54,35 @@ html, body {
     font-weight: bold;
 }
 
-.operator-buttons:hover {
+button:hover {
     background-color: #fbe4f3;
     cursor: pointer;
 }
 
-.operator-buttons:active {
+button:active {
     background-color: #f6c3e5;
     box-shadow: none;
 }
 
-.number-buttons {
-    width: 75px;
-    height: 75px;
-    border-radius: 20px;
-    border: 2px solid #f1f0ef;
-    box-shadow: 1px 1px 3px;
-    font-size: 30px;
+.previous-operand {
+    position: relative;
+    top: 8px;
+    width: 370px;
+    height: 50px;
+    margin: 1px auto;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.current-operand {
+    position: relative;
+    top: 10px;
+    font-size: 40px;
+    width: 370px;
+    margin: 2px auto;
+    text-align: right;
     font-weight: bold;
 }
 
-.number-buttons:hover, #equal:hover {
-    background-color: #f8f8f7;
-    cursor: pointer;
-}
-
-.number-buttons:active, #equal:active {
-    background-color: #e2e1df;
-    box-shadow: none;
-}
-
-#equal {
-    grid-column-start: 3;
-    grid-column-end: span 2;
-    border-radius: 20px;
-    border: 1px solid #f1f0ef;
-    box-shadow: 2px 1px 3px;
-    font-size: 30px;
-    font-weight: bold;
-}
 
